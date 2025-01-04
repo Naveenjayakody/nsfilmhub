@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Responsive Background Image</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        /* Reset default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-page background styling */
+        body {
+            height: 100vh;  /* Set the body height to full viewport height */
+            display: flex;  /* Flexbox to center content */
+            justify-content: center;  /* Center horizontally */
+            align-items: center;      /* Center vertically */
+            font-family: Alata, sans-serif; /* Set font */
+            background-color: rgb(15, 16, 17);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .background {
+            background-image: url('images/uploads/bg2.png'); /* Replace with your image URL */
+            background-position: center;  /* Center the background image */
+            background-repeat: no-repeat; /* Prevent repeating the background image */
+            background-size: cover;      /* Ensure the image covers the entire container */
+            width: 100%;                 /* Set width to 100% of the container */
+            height: 100%;               /* Set height to 100% of the container */
+            display:block;               /* Use flexbox to center content inside */
+            justify-content: center;     /* Center content horizontally */
+            align-items: center;         /* Center content vertically */
+            color: white;                /* White text color */
+            text-align: center;          /* Center text */
+        }
+
+        .blur {
+            backdrop-filter: blur(30px);
+        }
+
+
+        /* Add some styling to text */
+        .background h1 {
+            font-size: 5em;  /* Large text for the heading */
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation-name: example;
+            animation-duration: 2s;  
+            animation-fill-mode: forwards;
+            position: relative;
+        }
+
+        @keyframes example {
+            from {right: -600px;}
+            to {right: 0px;}
+}
+
+        .background p {
+            font-size: 1.5em;  /* Medium-sized text for the paragraph */
+        }
+
+
+
+        .item.hidden {
+            display: none;
+        }
+
+        .card {
+          transition: all 0.5s ease;
+          border: 1px solid rgb(83, 83, 83);
+        }
+
+        .imgcard {
+          transition: all 0.5s ease;
+        }
+
+        .card:hover {
+          color: #fff;
+          transform: scale(1.025);
+         /*transform: translateY(-10px);*/
+          box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+        }
+
+        .imgcard:hover {
+          color: #fff;
+          transform: scale(1.200);
+          box-shadow: rgba(37, 37, 37, 0.39) 0px 5px 5px;
+        }
+
+        .select {
+          background-color: #00757e;
+          border-radius: 5px;
+        }
+
+        option {
+          background-color: rgb(102, 102, 102);
+        }
+
+
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .background h1 {
+                font-size: 3em; /* Smaller heading on smaller screens */
+            }
+            .background p {
+                font-size: 1.2em; /* Smaller paragraph text */
+            }
+        }
+    </style>
+
+    
+</head>
+<body class="d-block">
+  <div class="background">
+
+
+    <nav class="navbar p-2  navbar-expand-lg blur navbar-dark fixed-top ">
+        <div class="container-fluid">
+          <b><a class="navbar-brand  text-white fs-4" href="index.html"><span style="color: rgb(111, 0, 255);">NS </span>FILMHUB</a></b>
+          
+
+          
+
+          <button class="navbar-toggler navbar-toggler-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item mx-4">
+                <a class="nav-link active  text-white" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item mx-4">
+                <a class="nav-link  text-white" href="#section1">Features</a>
+              </li>
+              <li class="nav-item mx-4">
+                <a class="nav-link  text-white" href="#text-muted">About</a>
+              </li>
+              <li class="nav-item dropdown mx-4">
+                <a class="nav-link dropdown-toggle  text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Help
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark bg-secondary">
+                  <li><a class="dropdown-item text-white" href="#">Action</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Horror</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Comedy</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Adventure</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Comedy</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link text-white">
+                <label for="genre">Film Catagory</label>
+                  <select id="genre" onchange="filterReviews()" class="select border-0 text-white mx-4 px-5 m-auto py-1">
+                    <option value="all">All</option>
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                  </select>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>  
+
+    <div class="col-12 my-4  position-fixed" style="z-index: 1;">
+      <div class="mt-5 align-items-center justify-content-center col-8 col-md-4 mx-auto">
+        <input type="text" id="searchInput" placeholder="Search for items..." class="col-12 p-2  blur bg-transparent text-info  text-center border-info border-1 rounded-5" onkeyup="searchItems()">
+      </div>
+    </div>
+
+     
+        <div class="position-absolute translate-middle start-50 top-50 col-12">
+          <div class="text-center text-md-start col-md-6 float-end ">
+            <h1>Welcome to <br> NS FILMHUB</h1>
+            <p class="">This is an example of a responsive background image.</p>
+          </div>
+        </div>
+  </div>
+  
+
+
+
+<span id="text-muted"></span>
+<section class="abc h-100">
+	<div class="container bg-dark rounded-4 p-4 my-5">
+		<div class="row gx-4 align-items-center justify-content-between m-auto">
+			<div class="col-md-5 order-2 order-md-1">
+				<div class="mt-5 mt-md-0 text-light text-center text-md-start">
+					<span class="text-muted" id="">Our Story</span>
+					<h2 class="fw-bold">About Us</h2>
+          <div class="p-2 border-bottom border-top border-info my-4">
+					<p class="">Welcome to [Website Name], your ultimate destination for streaming films online. We offer a diverse and expansive collection of films, from timeless classics to the latest blockbusters, all available to watch at the click of a button. Whether you’re a fan of action, drama, comedy, or indie films, our platform has something for every film enthusiast. 
+          <br><br>
+            Our mission is to provide a seamless and enjoyable viewing experience, with high-quality streams and easy navigation. Explore our curated collections, discover new favorites, and enjoy films in a variety of genres from the comfort of your home. 
+            
+            Join us today and immerse yourself in the world of cinema—whenever, wherever you like!</p>
+					
+        </div>
+				</div>
+			</div>
+			<div class="col-md-6 offset-md-1 order-1 order-md-2 ">
+				<div class="row gx-2 gx-lg-3 align-items-center justify-content-center">
+					<div class="col-5">
+						<div class="mb-2"><img class="img-fluid rounded-3 imgcard" src="images\section\a.jpg"></div>
+					</div>
+					<div class="col-5">
+						<div class="mb-2"><img class="img-fluid rounded-3 imgcard" src="images\section\b.jpg"></div>
+					</div>
+					<div class="col-5">
+						<div class="mb-2"><img class="img-fluid rounded-3 imgcard" src="images\section\c.jpg"></div>
+					</div>
+					<div class="col-5">
+						<div class="mb-2"><img class="img-fluid rounded-3 imgcard" src="images\section\d.jpg"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+<div class="mt-5 row" id="section1"></div>
+  <div class="abc col-12 h-100 my-5 ">
+    <div class="row d-flex col-12 mx-auto gx-1 px-0 justify-content-center " style="background-color: rgb(34, 34, 34);">
+
+    
+      <div class="item card mx-md-4 col-6 col-md-3 my-4 text-light " data-genre="action" style="background-color: var(  --bs-gray-800); ">
+        <img src="images\Thumbnails\Ruslan.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">
+              Ruslaan
+            </h5>
+            <p class="card-text">
+              Some quick example text to build on the
+            </p>
+            <a href="filminfo.html" class="btn btn-primary">
+              Go somewhere
+            </a>
+          </div>
+      </div>
+
+      <div class="item card mx-md-4 col-6 col-md-3 my-4 text-light" style="background-color: var(  --bs-gray-800);">
+        <img src="images\Thumbnails\Ruslan2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">
+              Ruslaan
+            </h5>
+            <p class="card-text">
+              Some quick example text to build on the
+            </p>
+            <a href="" class="btn btn-primary">
+              Go somewhere
+            </a>
+          </div>
+      </div>
+
+      <div class="item card mx-md-4 col-6 col-md-3 my-4 text-light" data-genre="comedy" style="background-color: var(  --bs-gray-800);">
+        <img src="images\Thumbnails\Singham again.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">
+              Singham Again
+            </h5>
+            <p class="card-text">
+              Some quick example text to build on the
+            </p>
+            <a href="" class="btn btn-primary">
+              Go somewhere
+            </a>
+          </div>
+      </div>
+
+      <div class="item card mx-md-4 col-6 col-md-3 my-4 text-light" style="background-color: var(  --bs-gray-800);">
+        <img src="images\Thumbnails\Terrifier 2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">
+              Terrifier 2
+            </h5>
+            <p class="card-text">
+              Some quick example text to build on the
+            </p>
+            <a href="" class="btn btn-primary">
+              Go somewhere
+            </a>
+          </div>
+      </div>
+
+      <div class="item card mx-md-4 col-6 col-md-3 my-4 text-light" data-genre="action" style="background-color: var(  --bs-gray-800);">
+        <img src="images\Thumbnails\Singham again.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">
+              Card title
+            </h5>
+            <p class="card-text">
+              Some quick example text to build on the
+            </p>
+            <a href="" class="btn btn-primary">
+              Go somewhere
+            </a>
+          </div>
+      </div>
+
+      <div class="item card mx-md-4 col-6 col-md-3 my-4 text-light" style="background-color: var(  --bs-gray-800);">
+        <img src="images\Thumbnails\Terrifier 2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">
+              Crd title
+            </h5>
+            <p class="card-text">
+              Some quick example text to build on the
+            </p>
+            <a href="" class="btn btn-primary">
+              Go somewhere
+            </a>
+          </div>
+      </div>
+     
+
+    </div>
+  </div>
+  
+
+
+  <div class="sec">
+    <div class="abc">Item 1</div>
+    <div class="abc">Item 1</div>
+    <div class="abc">Item 1</div>
+    <div class="abc">Item 1</div>
+    <div class="abc">Item 1</div>
+    <div class="abc">Item 1</div>
+    <div class="abc">Item 1</div>
+    <div class="abc">Item 1</div>
+</div>
+
+
+
+
+<script>
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+  const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+
+  
+  function filterReviews() {
+              var genre = document.getElementById('genre').value;
+              var reviews = document.querySelectorAll('.card');
+
+              reviews.forEach(function(review) {
+                  if (genre === 'all' || review.getAttribute('data-genre') === genre) {
+                      review.style.display = 'block';
+                  } else {
+                      review.style.display = 'none';
+                  }
+              });
+          }
+
+
+
+          // Function to search and filter items
+          function searchItems() {
+              // Get the input field and the search query
+              let input = document.getElementById('searchInput');
+              let filter = input.value.toLowerCase();
+              
+              // Get all list items
+              let items = document.querySelectorAll('.item');
+
+              // Loop through all list items and hide those who don't match the search query
+              items.forEach(function(item) {
+                  let text = item.textContent || item.innerText;
+                  if (text.toLowerCase().includes(filter)) {
+                      item.classList.remove('hidden'); // Show the item
+                  } else {
+                      item.classList.add('hidden'); // Hide the item
+                  }
+              });
+          }
+
+
+
+
+
+
+          document.addEventListener("DOMContentLoaded", function() {
+            const items = document.querySelectorAll('.abc');
+
+            const showItemsOnScroll = () => {
+                const triggerBottom = window.innerHeight / 5 * 4; // Trigger point
+
+                items.forEach(abc => {
+                    const abcTop = abc.getBoundingClientRect().top;
+
+                    if(abcTop < triggerBottom) {
+                        abc.classList.add('visible');
+                    }
+                    else{
+                      abc.classList.remove('visible');
+                    } 
+                });
+            }
+
+            window.addEventListener('scroll', showItemsOnScroll);
+            showItemsOnScroll(); // Call it once to show items already in view
+        });
+   
+
+</script>
+
+</body>
+</html>

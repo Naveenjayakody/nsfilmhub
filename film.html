@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Responsive Background Image</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <style>
+        /* Reset default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-page background styling */
+        body {
+            height: 100vh;  /* Set the body height to full viewport height */
+            display: flex;  /* Flexbox to center content */
+            justify-content: center;  /* Center horizontally */
+            align-items: center;      /* Center vertically */
+           /* font-family: Alata, sans-serif; /* Set font */
+            font-family: sans-serif;
+            background-color: var( --bs-black);
+            overflow-x: hidden;
+        }
+
+        .backgroun {
+ 
+            width: 100%;                 /* Set width to 100% of the container */
+            height: 100%;                /* Set height to 100% of the container */
+            display:block;               /* Use flexbox to center content inside */
+            justify-content: center;     /* Center content horizontally */
+            align-items: center;         /* Center content vertically */
+            color: white;                /* White text color */
+            text-align: center;          /* Center text */
+            
+        }
+
+
+        .background2 {
+            background-image: url('bg4.png'); /* Replace with your image URL */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            justify-content: center;
+            align-items: center;
+            width: 100%;                 /* Set width to 100% of the container */
+            height: 30%;                /* Set height to 100% of the container */
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        .blur {
+            backdrop-filter: blur(30px);
+        }
+
+
+        /* Add some styling to text */
+        .background h1 {
+            font-size: 5em;  /* Large text for the heading */
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation-name: example;
+            animation-duration: 2s;  
+            animation-fill-mode: forwards;
+            position: relative;
+        }
+
+        @keyframes example {
+            from {right: -600px;}
+            to {right: 0px;}
+}
+
+        .background p {
+            font-size: 1.5em;  /* Medium-sized text for the paragraph */
+        }
+
+
+
+        .item.hidden {
+            display: none;
+        }
+
+
+
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .background h1 {
+                font-size: 2em; /* Smaller heading on smaller screens */
+            }
+            .background p {
+                font-size: 1.2em; /* Smaller paragraph text */
+            }
+        }
+    </style>
+</head>
+<body class="d-block">
+  <div class="background text-center">
+
+<!--Header start-->
+    <nav class="navbar p-2 navbar-expand-lg w-100 blur navbar-dark fixed-top">
+        <div class="container-fluid">
+          <b><a class="navbar-brand  text-white fs-4" href="#"><span style="color: rgb(111, 0, 255);">NS </span>FILMHUB</a></b>
+          <button class="navbar-toggler navbar-toggler-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item mx-4">
+                <a class="nav-link active  text-white" aria-current="page" href="bg.html">Home</a>
+              </li>
+              <li class="nav-item mx-4">
+                <a class="nav-link  text-white" href="#">Features</a>
+              </li>
+              <li class="nav-item mx-4">
+                <a class="nav-link  text-white" href="#text-muted">About</a>
+              </li>
+              <li class="nav-item dropdown mx-4">
+                <a class="nav-link dropdown-toggle  text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark bg-secondary">
+                  <li><a class="dropdown-item text-white" href="#">Action</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Horror</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Comedy</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Adventure</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Comedy</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>  
+<!--Header end-->
+</div>
+
+  
+  <div class="background2">
+  </div>
+
+<div class="col-10 mx-auto">
+<div class=" row gx-4 align-items-center justify-content-between m-auto" style="transform: translateY(-250px);">
+  <div class="col-md-4 px-5 px-md-0">
+    <div class="row gx-2 gx-lg-3 align-items-center justify-content-center">
+      <div class="col-6">
+        <div class="mb-2"><img class="img-fluid rounded-3" src="images\uploads\slider3.jpg"></div>
+      </div>
+      <div class="col-6">
+        <div class="mb-2"><img class="img-fluid rounded-3" src="images\uploads\slider2.jpg"></div>
+      </div>
+   
+    </div>
+  </div>
+
+
+  <div class="col-md-6 ">
+    <div class="mt-5 mt-md-0 text-light text-center text-md-start ">
+      <span class="text-muted" id="text-muted">Our Story</span>
+      <h1 class="fw-bold">NOW SHOWING</h1>
+      <div class="p-2 border-botto border-top border-info my-4">
+
+
+
+        <div class="card my-4 text-white" style="background-color: rgb(34, 33, 33);">
+          <h5 class="card-header" style="background-color: #326fa8ee;">
+            <b>RUSLAAN</b>
+          </h5>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>A well-known quote, contained in a blockquote element.</p>
+              <footer class="blockquote-footer">Someone famous in </footer>
+              <a href="#" class="btn btn-primary">Go To Watch</a>
+          </div>
+        </div>
+
+        <div class="card my-4 text-white" style="background-color: rgb(34, 33, 33);">
+          <h5 class="card-header " style="background-color: #326fa8ee;">
+            <b>RUSLAAN</b>
+          </h5>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>A well-known quote, contained in a blockquote element.</p>
+              <footer class="blockquote-footer">Someone famous in </footer>
+              <a href="#" class="btn btn-primary">Go To Watch</a>
+          </div>
+        </div>
+
+    </div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+  </body>
+
+</html>
