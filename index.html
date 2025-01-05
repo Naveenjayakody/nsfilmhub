@@ -126,11 +126,18 @@
             position: relative;
         }
 
+	.background p {
+            animation-name: example;
+            animation-duration: 2s;  
+            animation-fill-mode: forwards;
+            position: relative;
+        }
+
             @keyframes example {
-            from {bottom: -50px;
+            from {bottom: -100px;
             opacity: 0.5;}
             
-            to {bottom: 100px;
+            to {bottom: 0px;
             opacity: 1;}
         }
       }       
